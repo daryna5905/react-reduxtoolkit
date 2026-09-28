@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = import.meta.env.VITE_API_URL;
 
 export const loadPosts = async ({ page = 1, limit = 10 }) => {
   const res = await axios.get(`${baseUrl}/posts`, {
