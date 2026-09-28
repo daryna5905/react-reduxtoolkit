@@ -1,0 +1,9 @@
+.item {
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 3px solid;
+}

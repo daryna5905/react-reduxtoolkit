@@ -1,0 +1,17 @@
+.postList {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 100%;
+  min-width: 0;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+.deleting {
+  opacity: 0.65;
+  pointer-events: none;
+}

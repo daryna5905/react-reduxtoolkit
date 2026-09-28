@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  padding: 1.2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  background: var(--color-card, #f3f4f6);
+  border: 1px solid #e0e7ff;
+  border-radius: var(--radius, 16px);
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.08);
+}
+.input {
+  box-sizing: border-box;
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border, #e5e4e7);
+  color: #08060d;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent-border, rgba(65, 59, 255, 0.5));
+  box-shadow: 0 0 0 3px var(--accent-bg, rgba(170, 59, 255, 0.1));
+}
+.input::placeholder {
+  color: #6b6375;
+  opacity: 1;
+}
+.submitButton {
+  align-self: flex-end;
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+  padding: 9px 16px;
+  color: #fff;
+  background: #6366f1;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.submitButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.reactions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.reactions .input {
+  flex: 1;
+}
+@media (max-width: 900px) {
+  .form {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 520px) {
+  .reactions {
+    flex-direction: column;
+  }
+  .submitButton {
+    align-self: stretch;
+  }
+}
+.loading {
+  font-size: 30px;
+  margin-top: 50px;
+}
