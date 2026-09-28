@@ -5,6 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/react-reduxtoolkit/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>front-reduxtoolkit</title>
+    <script>
+      (function (l) {
+        if (l.search[1] === '/') {
+          const decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (segment) {
+              return segment.replace(/~and~/g, '&');
+            })
+            .join('?');
+
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          );
+        }
+      })(window.location);
+    </script>
     <script type="module" crossorigin src="/react-reduxtoolkit/assets/index-DRsBM-GJ.js"></script>
     <link rel="stylesheet" crossorigin href="/react-reduxtoolkit/assets/index-faGNVhZ5.css">
   </head>
